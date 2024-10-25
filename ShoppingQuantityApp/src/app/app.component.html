@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+  <h3>Available Stock: {{ availableQuantity }}</h3>
+  
+  <label for="quantity">Enter quantity to add to cart:</label>
+  <input type="number" id="quantity" [(ngModel)]="inputQuantity">
+
+  <button (click)="addQuantity()">Add to Cart</button>
+
+  <p *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</p>
+  <p *ngIf="confirmationMessage">{{ confirmationMessage }}</p>
+</div>
